@@ -1,0 +1,102 @@
+{
+	"ImportPath": "github.com/mrkaspa/socialdonor",
+	"GoVersion": "go1.4.2",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "code.google.com/p/goauth2/oauth",
+			"Comment": "weekly-56",
+			"Rev": "afe77d958c701557ec5dc56f6936fcc194d15520"
+		},
+		{
+			"ImportPath": "github.com/agtorre/gocolorize",
+			"Comment": "v1.0.0",
+			"Rev": "f42b554bf7f006936130c9bb4f971afd2d87f671"
+		},
+		{
+			"ImportPath": "github.com/go-sql-driver/mysql",
+			"Comment": "v1.2-112-gfb72997",
+			"Rev": "fb7299726d2e68745a8805b14f2ff44b5c2cfa84"
+		},
+		{
+			"ImportPath": "github.com/haisum/recaptcha",
+			"Rev": "66f523b082902939df0d01e42888b01a54f69dab"
+		},
+		{
+			"ImportPath": "github.com/huandu/facebook",
+			"Comment": "v1.5.4",
+			"Rev": "4a5abfb6351849998b7a2733f9c5203bdb2f715c"
+		},
+		{
+			"ImportPath": "github.com/jinzhu/gorm",
+			"Rev": "25ba9487aa744c5c484c16af15221b440a90c98c"
+		},
+		{
+			"ImportPath": "github.com/joho/godotenv",
+			"Comment": "v1-8-g443e926",
+			"Rev": "443e926da0d793d3b3f32118b1e4ba52ada26503"
+		},
+		{
+			"ImportPath": "github.com/lib/pq/hstore",
+			"Comment": "go1.0-cutoff-51-ga8d8d01",
+			"Rev": "a8d8d01c4f91602f876bf5aa210274e8203a6b45"
+		},
+		{
+			"ImportPath": "github.com/nf/geocode",
+			"Rev": "7f599921751d19cb2e3f2dd46a7f28565cdecf17"
+		},
+		{
+			"ImportPath": "github.com/nitrous-io/go-mixpanel",
+			"Rev": "5258575f8e3a6aee706c7f62e9ff05548fefaf7a"
+		},
+		{
+			"ImportPath": "github.com/revel/modules/jobs/app/controllers",
+			"Comment": "v0.12.0",
+			"Rev": "3589d5bf1d1b6da10a88c53701db2af12dfc0811"
+		},
+		{
+			"ImportPath": "github.com/revel/modules/jobs/app/jobs",
+			"Comment": "v0.12.0",
+			"Rev": "3589d5bf1d1b6da10a88c53701db2af12dfc0811"
+		},
+		{
+			"ImportPath": "github.com/revel/modules/static/app/controllers",
+			"Comment": "v0.12.0",
+			"Rev": "3589d5bf1d1b6da10a88c53701db2af12dfc0811"
+		},
+		{
+			"ImportPath": "github.com/revel/modules/testrunner/app",
+			"Comment": "v0.12.0",
+			"Rev": "3589d5bf1d1b6da10a88c53701db2af12dfc0811"
+		},
+		{
+			"ImportPath": "github.com/revel/revel",
+			"Comment": "v0.12.0-1-g83c6204",
+			"Rev": "83c62046c726f36daec7a28a335521f94b2561a6"
+		},
+		{
+			"ImportPath": "github.com/robfig/config",
+			"Rev": "0f78529c8c7e3e9a25f15876532ecbc07c7d99e6"
+		},
+		{
+			"ImportPath": "github.com/robfig/cron",
+			"Comment": "v1-2-g67823cd",
+			"Rev": "67823cd24dece1b04cced3a0a0b3ca2bc84d875e"
+		},
+		{
+			"ImportPath": "github.com/robfig/pathtree",
+			"Rev": "41257a1839e945fce74afd070e02bab2ea2c776a"
+		},
+		{
+			"ImportPath": "golang.org/x/net/websocket",
+			"Rev": "d9558e5c97f85372afee28cf2b6059d7d3818919"
+		},
+		{
+			"ImportPath": "gopkg.in/fsnotify.v1",
+			"Comment": "v1.2.0",
+			"Rev": "96c060f6a6b7e0d6f75fddd10efeaca3e5d1bcb0"
+		}
+	]
+}

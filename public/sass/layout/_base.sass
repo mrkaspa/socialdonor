@@ -1,0 +1,97 @@
+body
+  min-height: 100%
+  background: $black
+  color: $white
+  font:
+    weight: 300
+    size: 16px
+    family: $font
+
+
+a, .mobile-menu
+  pointer-events: auto
+  text-decoration: none
+
+
+footer
+  width: 100%
+  +box-sizing
+  padding: 20px 30px 
+  position: absolute 
+  bottom: 0
+  z-index: 99
+  
+  a
+    margin: 0.5vw
+    color: $white
+    text-shadow: 0 1px 1px rgba($black, 0.4)
+
+    &:hover
+      color: $darkred
+
+#navegation
+  width: 100%
+  position: absolute
+  +box-sizing
+  padding: 30px
+
+  .mobile-menu
+    display: none
+    
+
+  .brand,
+  .menu
+    display: inline-block
+
+
+  .brand
+    width: 40px
+    height: 40px
+    overflow: hidden
+    vertical-align: middle
+
+    img
+      max-width: 100%
+      max-height: 100%
+
+  .menu
+    padding: 0
+    margin: 0
+    margin-left: 10px
+    vertical-align: middle
+
+    .menu-item
+      display: inline-block
+      margin: 0
+
+      a
+        +box-sizing
+        padding: 10px
+        color: $white
+        font:
+          weight: 400
+
+        &:hover
+          color: $darkred
+
+.alert
+  display: block
+  width: 100%
+  +rounded(4px)
+  +box-sizing
+  padding: 8px 10px
+  margin: 0
+
+  &.alert-success
+    font:
+      weight: 400
+    text-transform: capitalize
+    color: darken($green, 40%)
+    background: $green
+
+  &.alert-error
+    font:
+      weight: 400
+    text-transform: capitalize
+    color: darken($red, 40%)
+    background: $red

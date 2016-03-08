@@ -1,0 +1,51 @@
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+
+<div class="wrapper">
+	<div class="middle solicitud">
+		<div class="user-data">
+			<header>
+				<h1><span class="name">{{.request.PatientName}}</span> te necesita.</h1>
+				<h3>
+					<strong>Tipo de sangre: </strong>{{.request.BloodType}} <span class="sep"></span>
+					<strong>Ciudad: </strong> {{.userRequest.City}}
+				</h3>
+			</header>
+			<div class="request">
+				{{.request.Description}}
+			</div>
+
+			<div class="request-detail">
+				<img src="http://graph.facebook.com/{{.userRequest.FbId}}/picture?type=square" alt="">
+				<p><strong>Solicitud creada por</strong>
+					<a href="https://facebook.com/{{.userRequest.FbId}}?ref=gotadevida" target="_blank">{{.userRequest.Name}}</a></p>
+			</div>
+
+			<div class="share">
+				<h2>Comparte con tus amigos </h2>
+				<div class="fb-share-button" data-href="https://gotadevida.co/requests/show/{{.request.UUID}}" data-layout="box_count"></div>
+
+				<a class="twitter-share-button"
+					href="https://gotadevida.co/requests/show/{{.request.UUID}}"
+					data-via="gotadevida"
+					data-count="vertical"
+					data-lang="es">
+					Twittear
+				</a>
+				<script type="text/javascript">
+				window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+				</script>
+
+				<script src="https://apis.google.com/js/platform.js" async defer>
+					{lang: 'es'}
+				</script>
+				<div class="g-plusone" data-size="tall"></div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+{{append . "moreScripts" "js/app.js"}}
+
+{{template "footer.html" .}}

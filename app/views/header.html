@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Gota de vida - {{.title}}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="/public/css/cartodb.css" />
+    <link rel="shortcut icon" type="image/png" href="/public/img/favicon.png">
+    <link href="https://fontastic.s3.amazonaws.com/tVv6EEbP8g3g2SrVHZVgFA/icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/app.css">
+    {{range .moreStyles}}
+      <link rel="stylesheet" type="text/css" href="/public/{{.}}">
+    {{end}}
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=1612888252288255";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div id="wrapper">
+    <div id="map">
+
+    </div>
+    <div id="page">
+      <div id="navegation" class="pointer-available">
+        <a href="/"class="brand">
+          <img src="/public/img/logo.png" class="logo" alt="Gotadevida">
+        </a>
+        <div class="mobile-menu">
+          <i class="icon-align-justify"></i>
+        </div>
+        <ul class='menu'>
+          <li class='menu-item'><a href='{{url "App.Map"}}'>Donantes</a></li>
+          <li class='menu-item'><a href='{{url "Requests.Index" }}'>Solicitar sangre</a></li>
+          {{if ne .user.ID 0 }}
+            <li class='menu-item'><a href='{{url "Profile.Index" }}'>Perfil</a></li>
+            <li class='menu-item'><a href='{{url "App.Logout"}}'>Salir</a></li>
+          {{else}}
+            <li class='menu-item'><a href='//blog.gotadevida.co'>Blog</a></li>
+          {{end}}
+        </ul>
+      </div>

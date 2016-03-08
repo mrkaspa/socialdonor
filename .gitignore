@@ -1,0 +1,7 @@
+test-results/
+tmp/
+.DS_Store
+node_modules/
+_vendor/
+.env_dev
+socialdonor.log

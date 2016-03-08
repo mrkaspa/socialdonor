@@ -1,0 +1,31 @@
+{{set . "title" "Inicio"}}
+{{template "header.html" .}}
+
+<div class="wrapper">
+  <div class="middle">
+    <div class="content-information">
+      <h1>Ayúdanos a salvar vidas</h1>
+
+      <p>Se parte de la comunidad que está salvando vidas. Nunca antes fue tan fácil saber quién está dispuesto a donar sangre o quién la necesita.</p>
+
+      {{template "flash_ne.html" .}}
+
+    </div>
+  </div><div class="middle">
+    <div class="user-data">
+
+      <a href="{{.authURL}}" class='facebook-login-button'>
+        Regístrate con facebook
+      </a>
+
+      <div class="span-data">
+        <span class="users">2.403.0304</span>
+        <span class='subtitle'>Donantes</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{append . "moreScripts" "js/app.js"}}
+
+{{template "footer.html" .}}

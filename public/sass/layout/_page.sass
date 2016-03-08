@@ -1,0 +1,227 @@
+#page
+  position: absolute
+  width: 100%
+  height: 100%
+  z-index: 2
+  pointer-events: none
+
+
+.wrapper
+  +flexbox
+  +justify-content(center)
+  +align-items(center)
+  +flex-wrap
+  +flex-direction
+  +box-sizing
+  height: 100%
+  width: 100%
+  max-width: 1040px
+  margin: 0 auto
+
+  *
+    pointer-events: auto !important
+
+  .middle
+    +box-sizing
+    padding: 2rem
+    width: 50%
+
+  .content-information
+    h1
+      margin: 0 0 2rem 0
+      font:
+        size: 2.8rem
+      line-height: 3.2rem
+      color: $white
+
+    p
+      color: rgba($white, 0.7)
+      font:
+        size: 1.1rem
+        weight: 400
+      line-height: 1.8rem
+      margin: 0 0 2rem 0
+
+  .user-data
+    +box-sizing
+    +rounded(0.2rem)
+    padding: 1rem
+    background: $black
+    +box-shadow(0 1px 2px rgba(0,0,0,0.4))
+
+
+    .facebook-login-button
+      background: $red
+      +rounded(2px)
+      +box-sizing
+      text-align: center
+      padding: 0.6rem
+      display: block
+      color: #fff
+      font:
+        size: 1.1rem
+
+      .mini
+        display: none
+        margin: 0.25rem
+        display: block
+        font:
+          size: 0.7rem
+
+    .span-data
+      display: none
+      position: relative
+      text-align: center
+      color: #000
+      +box-sizing
+      padding-top: 0.7rem
+      margin-top: 0.7rem
+
+      &:before
+        content: ' '
+        height: 1px
+        width: 100%
+        background: #dedede
+        position: absolute
+        top: 0
+        left: 0
+
+      .users
+        display: block
+        font:
+          size: 1.2rem
+
+      .subtitle
+        text-transform: uppercase
+        font:
+          size: 0.8rem
+          color: #fff
+
+
+.solicitud
+  color: $white
+
+  header
+    padding: 0 0 10px 0
+    border:
+      bottom: 1px solid #dedede
+
+    h1
+      font:
+        size: 30px
+        weight: 400
+      margin: 5px 0
+
+    .name
+      text-transform: capitalize
+
+    h3
+      font:
+        weight: 400
+      strong
+        margin:
+          right: 5px
+
+        color: $darkred
+        font:
+          weight: 400
+
+      .sep
+        margin: 0 5px
+  .share
+    margin: 20px 0
+    h2
+      margin:
+        bottom: 10px
+      font:
+        size: 18px
+        weight: 400
+    >
+      div, iframe, span
+        margin: 0 16px 0 0 !important
+        vertical-align: top !important
+
+  .request
+    margin: 0 0 20px 0
+    padding: 20px 0
+    font:
+      size: 17px
+    border:
+      bottom: 1px solid #dedede
+
+  .request-detail
+    img, p
+      display: inline-block
+      vertical-align: middle
+
+
+    img
+      background: $darkred
+      width: 40px
+      height: 40px
+      border: 2px solid $darkred
+      margin-right: 10px
+    p
+      strong
+        font:
+          weight: 400
+        margin:
+          bottom: 4px
+        display: block
+
+      a
+        color: $darkred
+@media only screen and (min-device-width: $min) and (max-device-width: $max)
+  #map
+    position: fixed
+  .wrapper
+    display: block
+    padding:
+      top: 70px
+
+  
+  footer
+    display: none 
+
+  #navegation
+    position: fixed
+
+    .brand
+      display: block
+
+    .mobile-menu
+      display: block
+      position: absolute
+      right: 20px
+      top: 30px
+      padding: 5px
+      font:
+        size: 20px
+        weight: bold
+      z-index: 3434
+      color: $white
+      padding: 4px
+
+    .menu
+      position: absolute
+      right: 20px
+      display: none
+
+      .menu-item
+        background: #fff
+        display: block
+        a
+          display: block
+          padding: 8px 20px
+          width: 100%
+          color: #000
+          font:
+            weight: bold
+  .middle
+    display: block
+    width: 100% !important
+
+  .field_20, .field_30, .field_40, .field_60, .field_70, .field_80
+    display: block !important
+    width: 100% !important
+    margin: 5% 0 !important

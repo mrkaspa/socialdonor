@@ -1,0 +1,86 @@
+{{set . "title" "Solicitud de sangre"}}
+{{template "header.html" .}}
+
+<div class="wrapper">
+	<div class="middle">
+		<div class="content-information">
+			<h1>Solicita sangre</h1>
+
+			<p>Bienvenido al servicio de solicitud de sangre de GotaDeVida, a continuación te solicitamos algunos datos que te pueden ayudar a encontrar un posible donante en una ubicación cercana a ti.</p>
+
+			<p>Recuerda agregar un número de contacto con el cual te puedan localizar más facilmente.</p>
+
+		</div>
+	</div><div class="middle">
+		<div class="user-data">
+			<form id="request" method="POST" action="{{url "Requests.Save" }}">
+
+				{{with $field := field "request.PatientName" .}}
+				<div class="field field_60">
+					<input id="{{$field.Id}}" type="text" name="{{$field.Name}}" value="{{$field.Flash}}" class="{{$field.ErrorClass}}" placeholder="Nombre del paciente"/>
+					<span class="error">{{$field.Error}}</span>
+				</div>
+				{{end}}
+
+				{{with $field := field "request.BloodType" .}}
+				<div class="field field_40">
+					<select id="{{$field.Id}}" name="{{$field.Name}}" value="{{$field.Flash}}" class="{{$field.ErrorClass}}">
+						<option disabled selected style='display:none;'>Tipo de sangre</option>
+						{{range $index, $element := $.bloodTypes}}
+						<option value="{{$element}}">{{$element}}</option>
+						{{end}}
+					</select>
+					<span class="error">{{$field.Error}}</span>
+				</div>
+				{{end}}
+
+				{{with $field := field "request.Description" .}}
+				<div class="field">
+					<textarea name="{{$field.Name}}" id="{{$field.Id}}" rows="5" cols="40" class="{{$field.ErrorClass}}" placeholder="Ingresa informacion acerca de la donacion y datos de contacto para las personas que puedan ayudar.">{{$field.Flash}}</textarea>
+					<span class="error">{{$field.Error}}</span>
+				</div>
+				{{end}}
+
+				<div class="field">
+					<input id="geocomplete" type="text" placeholder="Selecciona tu ubicación" value="" />
+				</div>
+
+				<div class="map_canvas"></div>
+
+				<div class="g-recaptcha" data-sitekey="6LfmTQoTAAAAAGFDXXmf4wYC0sMyR96LxryFKltg" data-callback="executecallback"></div>
+
+				<script>
+					function executecallback(){
+						$("#request").submit();
+					}
+				</script>
+				<div id="lat">
+					{{with $field := field "request.Lat" .}}
+					<input type="hidden" name="{{$field.Name}}" value="{{$field.Flash}}">
+					{{end}}
+				</div>
+
+				<div id="lng">
+					{{with $field := field "request.Lng" .}}
+					<input type="hidden" name="{{$field.Name}}" value="{{$field.Flash}}">
+					{{end}}
+				</div>
+
+				<div class="field" style="display: none;">
+					<input type="submit" class="btn" value="Crear solicitud" />
+				</div>
+
+				{{template "flash_ne.html" .}}
+			</form>
+		</div>
+	</div>
+</div>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+{{append . "moreScripts" "js/jquery.geocomplete.min.js"}}
+{{append . "moreScripts" "js/app.js"}}
+{{append . "moreScripts" "js/geo.js"}}
+{{append . "moreScripts" "js/request.js"}}
+
+{{template "footer.html" .}}

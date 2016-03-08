@@ -1,3 +1,9 @@
+#Social Donor
+
+It's a platform to share blood donning interests and to find blood donors using facebook notificacions(for this the domain has to use SSL). [Gota de vida](https://gotadevida.co/) is a project that uses this repo. The app uses cartoo db maps to display where are the blood donors located and uses geo referenced queries to find the nearest ones.
+
+To deploy this project in dokku remember to set these variables
+
 #Config in dokku
 
-dokku config:set gota DOMAIN="localhost:9000" MYSQL_DB="gota:DkDVF84Ac2GuwQ3c@tcp\(mariadb:3306\)/social_donor?charset=utf8&parseTime=True" FACEBOOK_APP_ID="1612888252288255" FACEBOOK_APP_SECRET="1041e5d25b5f3598cedb3eaea8870d30" CARTOO_DOMAIN="bottico" CARTOO_TOKEN="c139ff29e10c52d765d185497afd7d8e08416882"
+dokku config:set app DOMAIN="localhost:9000" MYSQL_DB="user:password@tcp\(mariadb:3306\)/db_name?charset=utf8&parseTime=True" FACEBOOK_APP_ID="xxx" FACEBOOK_APP_SECRET="xxx" CARTOO_DOMAIN="xxx" CARTOO_TOKEN="xxx"
